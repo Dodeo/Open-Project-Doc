@@ -1,0 +1,75 @@
+\documentclass[16pt, oneside]{report}
+\usepackage[francais]{babel}
+\usepackage{textcomp}
+\font\myfont=cmr12 at 40pt
+
+\title{{\myfont Projet libre}}
+\author{mbourlet, gfernand, fbuoro, mchoong \#e1r6}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Pr\'esentation du projet}
+Le but du projet est de r\'ealiser un jeu vid\'eo natif sur Android.\\
+Ce jeu seras un RPG au combat tour par tour mais avec un profond aspect strat\'egique, le joueur ne pourra pas choisir ses actions \`a chaque tour, il devra \'a la place programmer une IA plus ou moins basique (voir plus loin).\\
+Le projet se d\'ecomposeras\ en deux parties : l'engine et le jeu
+
+\section{Engine}
+L\textquotesingle engine seras un moteur basique pour le jeu, il devras \^etre r\'eutilisable sur diff\'erents projets. Son but sera d\textquotesingle acc\'el\'erer le d\'eveloppement futur et actuel du jeu. Il se divise en plusieurs Manager.
+
+\subsection{Game}
+La classe Game est la classe centrale de l'engine. C'est elle qui g\`ere la logique du programme avec son son syst\`eme de state.\\
+Au lancement la classe tente de se connecter automatiquement \`a l'api google pour que l'utilisateur se connecte et profite des achievements, de la sauvegarde sur le cloud etc.\\
+L'utilisateur peut refuser la connection. Si il refuse la connection 3 fois de suite au lancement, le programme ne lancera plus la connection automatique. Cette donn\'ee est stock\'ee dans un fichier en cache.\\
+Avant de lancer le jeu, la classe game va tenter de charger une sauvegarde via la DataManager.
+
+\subsection{Le DataManager}
+Le DataManager est celui qui g\`ere les sauvegardes de l'utilisateur. Il offre deux possibilit\'es:
+\begin{itemize}
+	\item Sauvegarder en local: Le fichier est stock\'e sur le telephone de l'utilisateur dans les fichiers de l'application.
+	\item Sauvegarder sur le cloud: Si l'utilisateur se connecte avec son compte Google+ et nous en donne l'autorisation, le DataManager sauvegarde \'egalement sur le cloud.\\
+\end{itemize}
+
+ 
+ Le travail du DataManager est de faciliter les taches de sauvegarde et de chargement des donn\'ees. Il permet lors du chargement de choisir automatiquement la bonne sauvegarde selon un timestamp ajout\'e au fichier et en g\'erant les conflits si n\'ecessaire. Lors de la sauvegarde il s'occupe de sauvegarder soit en local soit en local + cloud selon l'\'etat de connexion \`a l'API google.
+
+\section{Projet}
+Le projet en lui m\^eme utiliseras l\textquotesingle engine. Il devras utilis\'e toutes les technologies offerte par Google, tel que le stockage sur le Cloud, le multi-joueur, les hauts-faits etc.
+
+\chapter{Syst\'eme d\textquotesingle IA}
+Le joueur pourras contr\^oler une \'equipe de 3 personnages.\\
+Chaque personnage pourras avoir de nombreuses classes (Guerrier, Tank, Mage, Sorcier, Archer, Voleur...)\\
+Chaque classe de chaque personnage auras son propre niveau.\\
+Quand un personnage augmente de niveau dans une classe, il gagne des outils pour programmer son IA li\'e a cette classe, ces outils peuvent \^etre d\'ecomposer sous plusieurs types:
+\begin{itemize}
+	\item Condition: Permet de conditionner le comportement de l\textquotesingle IA
+	\item Action: Cela peut \^etre des sorts, des attaques, etc...
+	\item Slot: Permet de poser une nouvelle paire de conditions/actions
+\end{itemize}
+
+\section{Classe ?}
+Chaque personnage poss\`ede plusieurs classes, le joueur peux decider de changer la classes de ces personnages pendant un combat, permettant de faire varier les strat\'egies en fonction de l'adversaire (phase de rage, strat\'egie spéciale li\'ee a un adversaire, etc...)\\\\
+En fonction de la fr\'equence d\textquotesingle utilisation d'une classe dans un combat, celle ci gagne plus ou moins de pourcentage de la somme d\textquotesingle experience donn\'e par ce combat.
+
+\chapter{Planning de r\'ealisation}
+Le planning du projet seras g\'erer de façon agile (Sprint chaque semaine + r\'eunion tout les jours de 15min pour faire un bilan rapide).\\
+Cependant, nous allons r\'ealiser plusieurs it\'eration du projet. Chaque it\'eration auras pour but de rendre un produit fonctionnel.
+\begin{itemize}
+	\item It\'eration 1: R\'ealiser tout le système de classe / level / item + réalisation d'un premier système de combat contre une IA ennemie basique.
+	\item It\'eration 2: R\'ealiser la partie histoire du jeu, en d\'eveloppant les différentes IA enemies ainsi que le syst\`eme d'histoire branch\'ee.
+	\item It\'eration 3: R\'ealiser la partie multi-joueur du jeu, avec un syst\`eme de ladder.
+\end{itemize}
+L'it\'eration 1 auras une dur\'ee de 3 mois.\\
+Les it\'eration 2 et 3 auront chacune une dur\'ee de 2 mois sachant qu'elle seront r\'ealiser en parall\`ele par deux \'equipe de deux.
+
+\chapter{Prototype design}
+Coming soon
+
+\chapter{Communication}
+La communication se feras via un Website/devblog + twitter.
+
+\chapter{Bonus}
+
+\end{document}
