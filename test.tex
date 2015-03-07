@@ -31,9 +31,14 @@ Le DataManager est celui qui g\`ere les sauvegardes de l'utilisateur. Il offre d
 	\item Sauvegarder en local: Le fichier est stock\'e sur le telephone de l'utilisateur dans les fichiers de l'application.
 	\item Sauvegarder sur le cloud: Si l'utilisateur se connecte avec son compte Google+ et nous en donne l'autorisation, le DataManager sauvegarde \'egalement sur le cloud.\\
 \end{itemize}
-
- 
  Le travail du DataManager est de faciliter les taches de sauvegarde et de chargement des donn\'ees. Il permet lors du chargement de choisir automatiquement la bonne sauvegarde selon un timestamp ajout\'e au fichier et en g\'erant les conflits si n\'ecessaire. Lors de la sauvegarde il s'occupe de sauvegarder soit en local soit en local + cloud selon l'\'etat de connexion \`a l'API google.
+
+
+\subsection{State}
+Les states sont les diff\'erents états du jeu, ce sont elles qui permettront de g\'erer la navigation dans l'application. La game comprends une stack de State.\\
+ Imaginons par exemple que l'utilisateur soit dans le menu principal, c'est donc la state li\'ee a ce menu qui recevra toutes les actions de l'utilisateur. Si il lance une partie, la state de la partie se retrouvera en haut de la stack recevant ainsi toutes les instructions de la game, c'est elle qui pourra dessiner et recevoir les inputs de l'utilisateur. \\
+ Si l'utilisateur veut revenir a l'\'etat precedent qui est donc le menu principal nous n'avons plus qu'\`a d\'epiler la state de la partie afin que la state du menu reprenne le contr\^ole sur le dessin et les inputs.
+
 
 \section{Projet}
 Le projet en lui m\^eme utiliseras l\textquotesingle engine. Il devras utilis\'e toutes les technologies offerte par Google, tel que le stockage sur le Cloud, le multi-joueur, les hauts-faits etc.
@@ -68,8 +73,26 @@ Les it\'eration 2 et 3 auront chacune une dur\'ee de 2 mois sachant qu'elle sero
 Coming soon
 
 \chapter{Communication}
-La communication se feras via un Website/devblog + twitter.
+La communication se feras via un Website/devblog et sera appui\'ee par un compte twitter qui d\'etaillera l'avancement du jeu en postant des photos, vid\'dos de gameplay etc. Le but \'etant d'attirer le plus de personnes \`a s'intéresser au projet avant m\^eme la sortie du jeu. C'est notamment pour cela qu'une phase de beta test sera disponible aux utilisateurs les plus interess\'ess\'es.\\
+ La beta test sera g\'er\'ee a l'aide de la google développer console. Le site proposera \'egalement l'inscription \`a une newsletter. 
+
+\chapter{Mon\'etisation}
+La mon\'etisation du jeu se fera via les achats in-app et les pubs. 
+Les achats in-app ne devront pas bousculer l'\'equilibre du jeu, notamment dans l'optique d'un multijoueur le plus strat\'egique possible. Nous pr\'evoyons pour le moment l'achat de packs d'xp qui permettrait de lvl up plus vite. \\
+Les pubs se voudront non-intrusive pour ne pas g\^acher l'\'experience utilisateur. Elles pourront \^etre par exemple integr\'ees sous forme de bannière a l'\'ecran de score d'un combat. Elles ne devront pas g\^ener la navigation. Nous utiliserons des api comme admob (utilis\'e par Rovio, Backflip Studio, Fingersoft... )pour int\'egrer des pubs cibl\'ees et donc augmenter nos revenus.
+
+\chapter{Elements \`a v\'erifier en fin de projet}
+\begin{itemize}
+	\item Un syst\`eme d'IA fonctionnel (voir chapitre Syst\`eme d'IA)
+	\item Une interface agr\'eable
+	\item Un mode solo fonctionnel
+	\item Un multijoueur fonctionnel
+	\item La pr\'esence d'achievements
+\end{itemize}
 
 \chapter{Bonus}
+\begin{itemize}
+	\item Une mon\'etisation bien int\'egr\'ee
+\end{itemize}
 
 \end{document}
