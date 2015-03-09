@@ -7,7 +7,7 @@
 \graphicspath{{./images/}{./}}  
 
 
-\title{{\myfont Projet libre}}
+\title{{\myfont Open Project}}
 \author{mbourlet, gfernand, fbuoro, mchoong \#e1r6}
 \date{}
 
@@ -15,39 +15,38 @@
 
 \maketitle
 
-\chapter{Pr\'esentation du projet}
-Le but du projet est de r\'ealiser un jeu vid\'eo natif sur Android.\\
-Ce jeu seras un RPG au combat tour par tour mais avec un profond aspect strat\'egique, le joueur ne pourra pas choisir ses actions \`a chaque tour, il devra \`a la place programmer une IA plus ou moins basique (voir plus loin).\\
-Le projet se d\'ecomposeras\ en deux parties : l'engine et le jeu
+\chapter{Project presentation}
+The goal of our project is to achieve a native video game on Android. \\
+This game will be a battle RPG turn by turn but with a profound strategical aspect , the player can not choose his actions at each turn, instead he will have to set a basic IA (see below). \\
+The project will be split into two parts: the engine and the game.
 
 \section{Engine}
-L\textquotesingle engine seras un moteur basique pour le jeu, il devras \^etre r\'eutilisable sur diff\'erents projets. Son but sera d\textquotesingle acc\'el\'erer le d\'eveloppement futur et actuel du jeu. Il se divise en plusieurs Manager.
+The engine will be a basic engine for the game, it will have to be reusable on different projects . Its purpose will be to accelerate the future and current development of the game. It is divided into several Manager.
 
 \subsection{Game}
-La classe Game est la classe centrale de l'engine. C'est elle qui g\`ere la logique du programme avec son son syst\`eme de state.\\
-Au lancement la classe tente de se connecter automatiquement \`a l'api google pour que l'utilisateur se connecte et profite des achievements, de la sauvegarde sur le cloud etc.\\
-L'utilisateur peut refuser la connection. Si il refuse la connection 3 fois de suite au lancement, le programme ne lancera plus la connection automatique. Cette donn\'ee est stock\'ee dans un fichier en cache.\\
-Avant de lancer le jeu, la classe game va tenter de charger une sauvegarde via la DataManager.
+Game class is the central class of the engine. He's the one who manage the program logic with his State System. \\
+At launch the class tries to automatically connect to the google api for user connects and takes advantage of the achievements, the backup to the cloud etc. \\
+The user may refuse the connection. If he refuses the connection three times at launch, the program will no longer launch the automatic connection. This is in stock in a given cache file . \\
+Before starting the game, the game class will attempt to load a backup via the DataManager .
 
 \subsection{Le DataManager}
-Le DataManager est celui qui g\`ere les sauvegardes de l'utilisateur. Il offre deux possibilit\'es:
-\begin{itemize}
-	\item Sauvegarder en local: Le fichier est stock\'e sur le telephone de l'utilisateur dans les fichiers de l'application.
-	\item Sauvegarder sur le cloud: Si l'utilisateur se connecte avec son compte Google+ et nous en donne l'autorisation, le DataManager sauvegarde \'egalement sur le cloud.\\
-\end{itemize}
- Le travail du DataManager est de faciliter les taches de sauvegarde et de chargement des donn\'ees. Il permet lors du chargement de choisir automatiquement la bonne sauvegarde selon un timestamp ajout\'e au fichier et en g\'erant les conflits si n\'ecessaire. Lors de la sauvegarde il s'occupe de sauvegarder soit en local soit en local + cloud selon l'\'etat de connexion \`a l'API google.
+The DataManager is the one who manages the backups of the user. It offers two possibilities :
+\begin {itemize}
+	\item Local Save : The file is stored on the user's phone in the application files .
+	\item Cloud Save : If the user logs in with a Google+ account and gives us the authorization, the DataManager also backup to the cloud. \\ 
+\end {itemize}
+ The work of the DataManager is to facilitate the backup spots and loading of data . It choose the correct backup according to a timestamp adding to the file and by managing conflicts if necessary. When saving he save either locally or in locally + cloud connection according to the Google API connection state.
 
 
 \subsection{State}
-Les states sont les diff\'erents états du jeu, ce sont elles qui permettront de g\'erer la navigation dans l'application. La game comprends une stack de State.\\
- Imaginons par exemple que l'utilisateur soit dans le menu principal, c'est donc la state li\'ee a ce menu qui recevra toutes les actions de l'utilisateur. Si il lance une partie, la state de la partie se retrouvera en haut de la stack recevant ainsi toutes les instructions de la game, c'est elle qui pourra dessiner et recevoir les inputs de l'utilisateur. \\
- Si l'utilisateur veut revenir a l'\'etat precedent qui est donc le menu principal nous n'avons plus qu'\`a d\'epiler la state de la partie afin que la state du menu reprenne le contr\^ole sur le dessin et les inputs.
+The states are the different states of the game, they will manage the navigation in the application.\\
+MENGWEI HELP ME TO EXPLAIN STATE :'(
 
 
 \section{Projet}
-Le projet en lui m\^eme utiliseras l\textquotesingle engine. Il devras utilis\'e toutes les technologies offerte par Google, tel que le stockage sur le Cloud, le multi-joueur, les hauts-faits etc.
+The project gonna use our engine. He'll have to use all the technologies offered by Google, such as cloud storage , multiplayer , achievements  etc.
 
-\chapter{Syst\'eme d\textquotesingle IA}
+\chapter{IA}
 Le joueur pourras contr\^oler une \'equipe de 3 personnages.\\
 Chaque personnage pourras avoir de nombreuses classes (Guerrier, Mage, Soigneur)\\
 Chaque classe de chaque personnage auras son propre niveau.\\
