@@ -1,7 +1,11 @@
 \documentclass[16pt, oneside]{report}
 \usepackage[francais]{babel}
 \usepackage{textcomp}
+ \usepackage[pdftex]{graphicx}
+ \usepackage{grffile}  
 \font\myfont=cmr12 at 40pt
+\graphicspath{{./images/}{./}}  
+
 
 \title{{\myfont Projet libre}}
 \author{mbourlet, gfernand, fbuoro, mchoong \#e1r6}
@@ -69,8 +73,23 @@ Cependant, nous allons r\'ealiser plusieurs it\'eration du projet. Chaque it\'er
 L'it\'eration 1 auras une dur\'ee de 3 mois.\\
 Les it\'eration 2 et 3 auront chacune une dur\'ee de 2 mois sachant qu'elle seront r\'ealiser en parall\`ele par deux \'equipe de deux.
 
-\chapter{Prototype design}
-Coming soon
+\chapter{Design}
+
+Le jeu sera r\'ealis\'e en pixel art a l'aide du logiciel Pixel Edit. Chaque partie du corps de nos personnages et chaque item seront diff\'erents calques que nous superposeront pour cr\'eer nos personnages. \\
+Cela nous permets de r\'ealiser rapidement un grand nombre de sets de personnages et de rendre nos personnages principaux facilement personnalisables. 
+Voici un exemple de nos premi\`eres r\'ealisations:\\
+\\
+\\
+\includegraphics[width=0.3\textwidth]{character-base}
+\includegraphics[width=0.3\textwidth]{character-head}
+\includegraphics[width=0.3\textwidth]{character-robe}
+\includegraphics[width=0.3\textwidth]{character-wand}
+\\
+\\
+\\
+\begin{center}
+\includegraphics[width=0.3\textwidth]{character}
+\end{center}
 
 \chapter{Communication}
 La communication se feras via un Website/devblog et sera appui\'ee par un compte twitter qui d\'etaillera l'avancement du jeu en postant des photos, vid\'dos de gameplay etc. Le but \'etant d'attirer le plus de personnes \`a s'intéresser au projet avant m\^eme la sortie du jeu. C'est notamment pour cela qu'une phase de beta test sera disponible aux utilisateurs les plus interess\'ess\'es.\\
