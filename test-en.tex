@@ -16,59 +16,93 @@
 \maketitle
 
 \chapter{Project presentation}
-The goal of our project is to achieve a native video game on Android. \\
-This game will be a turn by turn battle RPG but with a profound strategical aspect , the player can not choose his actions at each turn, instead he will have to set a basic IA (see below). \\
+The goal of our project is to build a native video game on Android. \\
+This game will be a turn by turn battle role-playing game(RPG) but with a profound strategical aspect. Unlike other transitional turn by turn battle RPGs, the player cannot choose his actions at each turn, instead the actions of each turn are triggered by a list of AI that set by player.\\
 The project will be split into two parts: the engine and the game.
 
 \section{Engine}
-The engine will be a basic engine for the game, it will have to be reusable on different projects . Its purpose will be to accelerate current and future development of the game. It is divided into several Managers
+The engine will be the framework for the game, it will be reusable for different projects. Its purpose is to accelerate the current and future development of the game. It is divided into several parts.
 
 \subsection{Game}
-Game class is the central class of the engine. It is the one who manage the program logic with its State System. \\
-At launch the class tries to automatically load the saved game.
+Game class is the central class of the engine. It manages the program logic and the transition of game states. \\
+At launch, the game tries to load the saved game automatically.
 
 \subsection{DataManager}
-The DataManager is the one who manages the user backups. It offers two possibilities :
+The DataManager manages the user backups. It offers two possibilities :
 \begin {itemize}
-	\item Local Save : The file is stored on the user's phone in the application files.
-	\item Cloud Save : If the user logs in with a Google+ account and gives us the authorization, the DataManager also backup to the cloud. \\ 
+	\item Local Save : The game data is stored on the user's phone in the application files.
+	\item Cloud Save : If the user logs in with a Google+ account and gives us the authorization, the DataManager also backup the game data to the cloud. \\ 
 \end {itemize}
 
 
-\subsection{State}
-The states are the different states of the game, they will manage the navigation in the application.\\
+\subsection{Others}
+Other features of the engine maybe as below:\\
+\begin {itemize}
+	\item TextureManager : Manage the graphical content
+	\item AudioManager : Manage the audio content
+	\item GameState: Manage the interface and logic
+	\item Etc.\\
+\end {itemize}
 
 \section{Projet}
-The project gonna use our engine. it will have to use most the technologies offered by Google, such as cloud storage , multiplayer , achievements  etc.
+The project is built mainly using the feature from our engine. For other features such as cloud storage, multiplayer, achievements and etc., it will use the technologies offered by Google.
 
-\chapter{IA}
-The player will be able to control a team of 3 characters . \\
-Each character will be able to have sevrals classes ( Warrior , Mage, Healer ) \\
-Each class of each character will have its own level. \\
-When a character levels up in a class, he gains tools to program the AI of this class, these tools can be decomposed into several types :
-\begin {itemize}
-\item Condition: The behaviour of the AI
-\item Action: They can be spells, attacks, etc ...
-\item Slot : To build a new set of conditions / actions
-\end {itemize}
-
-\section{Class system details}
-Each character has multiple classes, the player can decide to change the class of these characters during the fight to vary the strategies according to the opponent.\\\\
-Depending on the frequency use of a class during a fight, this one earns more or less percentage of the amount of experience given by this fight.
-
-\chapter{Realization planning}
-The project will use the Agile method (Sprint + meeting of 15 minutes every day to make a quick assessment ) . \\
-However, we gonna achieve many iterations for the project. Each iteration 'll aim to make a functional product , consisting of an improvement of the previous one.\\
+\chapter{Gameplay}
+\section{Roles}
+Player starts the game with 3 distinctive characters, with 3 initial roles. \\
+There are 7 roles available in the game, they will be introduced to user in the story mode, progressively. 7 roles as below:
 \begin{itemize}
-\item Iteration 1: Achieve a fight between two basic AI ( Allie (programmable) / Enemy )
-\item Iteration 2: Achieve a basic class system
-\item Iteration 3: Achieve level + inventory system
-\item Iteration 4: Achieve the story mode / basic quests
-\item Iteration 5: Adding enemy AI
-\item Iteration 6: Improving the system of history / quest (branch)\\
+	\item Fighter
+	\item Healer
+	\item Tank
+	\item Black Magician
+	\item Green Magician
+	\item Thief
+	\item Archer\\
+\end{itemize}
+Each character can play as different role throughout the game. Each role levels up with a character, depending how often it is used by that character in battles.
+
+\section{Behaviors}
+Each role has a set of behaviors. Behavior controls how a role act under certain condition, example behavior for a fighter as below:\\
+\begin{itemize}
+	\item condition: nearest enemy, action: attack
+	\item condition: enemy with lowest hp, action: attack\\
+\end{itemize}
+More behaviors can be define by leveling up a role. Each action cost certain amount of active time in battle.\\\\
+Active time is the time in second that needed to start certain action in a battle, aka casting time.
+
+\section{Formations}
+With different roles, user can create different formations. Example formations as below:\\
+\begin{itemize}
+	\item formation 1: Balanced
+		\begin{itemize}
+			\item role1: fighter
+			\item	role2: healer
+			\item role3: tank
+		\end{itemize}
+	\item formation 2: Attackers
+		\begin{itemize}
+			\item role1: fighter
+			\item	role2: fighter
+			\item role3: fighter\\
+		\end{itemize}
+\end{itemize}
+Formations can be switched during battle. Each role has a specific action that can be initiate by user manually during battle. These actions cost double action time if initiated manually.
+The player will be able to control a team of 3 characters . \\
+
+\chapter{Methodology}
+The project will use the Agile method (Sprint + meeting of 15 minutes every day to make a quick assessment ) . \\
+The project will be divided into several steps. In each step, we aim to make a functional product with additional features,  on top of the improvement of the previous step.\\
+\begin{itemize}
+\item step 1: Achieve a fight between two basic AI ( Allie (programmable) / Enemy )
+\item step 2: Achieve a basic class system
+\item step 3: Achieve level + inventory system
+\item step 4: Achieve the story mode / basic quests
+\item step 5: Add enemy AI
+\item step 6: Improve the story mode / quest (branch)\\
 \end{itemize}
 
-At the end of these iterations , we can consider that the mandatory part is over. We expect the realization of some bonus?: \\
+Upon finishing the final step, we can consider that the mandatory part is finished. Bonus features for the project maybe as below: \\
 \begin{itemize}
 	\item	Adding achievements
 	\item	More items
@@ -81,7 +115,7 @@ At the end of these iterations , we can consider that the mandatory part is over
 
 \chapter{Design}
 
-The game design will be made in Pixel Art. Here is one of our implementation:
+The graphical assets of the game will be made using Pixel Art. Here are some of our implementation:
 \\
 \\
 \includegraphics[width=0.3\textwidth]{character-base}
@@ -95,13 +129,12 @@ The game design will be made in Pixel Art. Here is one of our implementation:
 \includegraphics[width=0.3\textwidth]{character}
 \end{center}
 
-\chapter{Communication}
-The communication will be made via a Website / dev blog and will be helped by twitter account detailing the progress of the game by posting photos, gameplay videos etc. We want to attract people and make them interested in the project even before the release of the game. This is especially why a beta test phase will be available to the most interested users. \\
- The beta test will be managed using the google developer console. The website also propose a newsletter.
-
+\chapter{Promotion}
+The promotion will be made via a Website / dev blog and will be helped by twitter account detailing the progress of the game by posting photos, gameplay videos etc. We want to attract people and make them interested in the project even before the release of the game. This is especially why a beta test phase will be available to the most interested users. \\
+ The beta test will be managed using the google developer console. The website will also sent newsletter to users.\\
 \chapter{Monetization}
 The monetization of the game will be via in-app purchases and ads.
-The in-app purchases should not upset the balance of the game, especially in the context of the multiplayer . We currently plan to offer paying xp packs that would help the player to level up faster. \\
+The in-app purchases should not affect the fairness of the game, especially in the context of the multiplayer . We currently plan to offer paying experience packs that would help the player to level up faster. \\
 The ads are non-intrusive and will not disturb the user experience. We will use admob  API ( used by Rovio, Backflip Studio, Fingersoft ...) to integrate the targeted ads and increase our revenue.
 
 \chapter{Checklist at the end of the project}

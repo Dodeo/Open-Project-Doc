@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.26)  10 MAR 2015 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.26)  10 MAR 2015 14:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -297,130 +297,170 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
 [1
 
-] [2]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+[2]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 [3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+
+ []
+
+[4]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[4
+[5
 
 ]
 Chapitre 4.
-<character-base.png, id=21, 32.12pt x 32.12pt>
+<character-base.png, id=24, 32.12pt x 32.12pt>
 File: character-base.png Graphic file (type png)
  <use character-base.png>
-Package pdftex.def Info: character-base.png used on input line 87.
+Package pdftex.def Info: character-base.png used on input line 121.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
-<character-head.png, id=23, 32.12pt x 32.12pt>
+<character-head.png, id=26, 32.12pt x 32.12pt>
 File: character-head.png Graphic file (type png)
  <use character-head.png>
-Package pdftex.def Info: character-head.png used on input line 88.
+Package pdftex.def Info: character-head.png used on input line 122.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
-<character-robe.png, id=24, 32.12pt x 32.12pt>
+<character-robe.png, id=27, 32.12pt x 32.12pt>
 File: character-robe.png Graphic file (type png)
  <use character-robe.png>
-Package pdftex.def Info: character-robe.png used on input line 89.
+Package pdftex.def Info: character-robe.png used on input line 123.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
-<character-wand.png, id=25, 32.12pt x 32.12pt>
+<character-wand.png, id=28, 32.12pt x 32.12pt>
 File: character-wand.png Graphic file (type png)
  <use character-wand.png>
-Package pdftex.def Info: character-wand.png used on input line 90.
+Package pdftex.def Info: character-wand.png used on input line 124.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--94
+Underfull \hbox (badness 10000) in paragraph at lines 118--128
 
  []
 
 
-Overfull \hbox (75.67085pt too wide) in paragraph at lines 84--94
+Overfull \hbox (75.67085pt too wide) in paragraph at lines 118--128
 [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--94
+Underfull \hbox (badness 10000) in paragraph at lines 118--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--94
+Underfull \hbox (badness 10000) in paragraph at lines 118--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--94
+Underfull \hbox (badness 10000) in paragraph at lines 118--128
 
  []
 
-<character.png, id=26, 32.12pt x 32.12pt>
+<character.png, id=29, 32.12pt x 32.12pt>
 File: character.png Graphic file (type png)
  <use character.png>
-Package pdftex.def Info: character.png used on input line 95.
+Package pdftex.def Info: character.png used on input line 129.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
- [5
+ [6
 
  <./character-base.png> <./character-head.png> <./character-robe.png> <./charac
 ter-wand.png> <./character.png>]
 Chapitre 5.
-[6
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+[7
 
 ]
 Chapitre 6.
-[7
+[8
 
 ]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[8
+[9
 
 ]
 Chapitre 8.
-[9
+[10
 
 ] (./test-en.aux) ) 
 Here is how much of TeX's memory you used:
- 3077 strings out of 493117
- 45277 string characters out of 6135433
+ 3075 strings out of 493117
+ 45254 string characters out of 6135433
  106005 words of memory out of 5000000
- 6519 multiletter control sequences out of 15000+600000
+ 6517 multiletter control sequences out of 15000+600000
  8798 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,30p,377b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,30p,373b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr12.pfb>
-Output written on test-en.pdf (10 pages, 59418 bytes).
+Output written on test-en.pdf (11 pages, 60915 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
