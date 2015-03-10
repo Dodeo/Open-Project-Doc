@@ -25,9 +25,7 @@ The engine will be a basic engine for the game, it will have to be reusable on d
 
 \subsection{Game}
 Game class is the central class of the engine. He's the one who manage the program logic with his State System. \\
-At launch the class tries to automatically connect to the google api for user connects and takes advantage of the achievements, the backup to the cloud etc. \\
-The user may refuse the connection. If he refuses the connection three times at launch, the program will no longer launch the automatic connection. This is in stock in a given cache file . \\
-Before starting the game, the game class will attempt to load a backup via the DataManager .
+At launch the class tries to automatically load the save.
 
 \subsection{Le DataManager}
 The DataManager is the one who manages the backups of the user. It offers two possibilities :
@@ -35,59 +33,55 @@ The DataManager is the one who manages the backups of the user. It offers two po
 	\item Local Save : The file is stored on the user's phone in the application files .
 	\item Cloud Save : If the user logs in with a Google+ account and gives us the authorization, the DataManager also backup to the cloud. \\ 
 \end {itemize}
- The work of the DataManager is to facilitate the backup spots and loading of data . It choose the correct backup according to a timestamp adding to the file and by managing conflicts if necessary. When saving he save either locally or in locally + cloud connection according to the Google API connection state.
 
 
 \subsection{State}
 The states are the different states of the game, they will manage the navigation in the application.\\
-MENGWEI HELP ME TO EXPLAIN STATE :'(
-
 
 \section{Projet}
 The project gonna use our engine. He'll have to use all the technologies offered by Google, such as cloud storage , multiplayer , achievements  etc.
 
 \chapter{IA}
-Le joueur pourras contr\^oler une \'equipe de 3 personnages.\\
-Chaque personnage pourras avoir de nombreuses classes (Guerrier, Mage, Soigneur)\\
-Chaque classe de chaque personnage auras son propre niveau.\\
-Quand un personnage augmente de niveau dans une classe, il gagne des outils pour programmer son IA li\'e a cette classe, ces outils peuvent \^etre d\'ecomposer en plusieurs types:
-\begin{itemize}
-	\item Condition: Permet de conditionner le comportement de l\textquotesingle IA
-	\item Action: Cela peut \^etre des sorts, des attaques, etc...
-	\item Slot: Permet de poser une nouvelle paire de conditions/actions
-\end{itemize}
+The player will be able to control a team of 3 characters . \\
+Each character will be able to have many classes ( Warrior , Mage, Healer ) \\
+Each class of each character will have its own level. \\
+When a character levels up in a class , he gains tools to program the AI of this class, these tools can be decompose into several types :
+\begin {itemize}
+\item Condition: The behaviour of the AI
+\item Action: This can be spells, attacks, etc ...
+\item Slot : To ask a new set of conditions / actions
+\end {itemize}
 
 \section{Classe ?}
-Chaque personnage poss\`ede plusieurs classes, le joueur peux decider de changer la classes de ces personnages pendant un combat, permettant de faire varier les strat\'egies en fonction de l'adversaire (phase de rage, strat\'egie spéciale li\'ee a un adversaire, etc...)\\\\
-En fonction de la fr\'equence d\textquotesingle utilisation d'une classe dans un combat, celle ci gagne plus ou moins de pourcentage de la somme d\textquotesingle experience donn\'e par ce combat.
+Each character has multiple classes , the player can decide to change the classes of these characters during the fight to vary the strategies according to the opponent.\\\\
+Depending on the use frequency of a class in a fight , this one earns more or less percentage of the amount of experience given by this fight.
 
-\chapter{Planning de r\'ealisation}
-Le planning du projet seras g\'erer de façon agile (Sprint chaque semaine + r\'eunion tout les jours de 15min pour faire un bilan rapide).\\
-Cependant, nous allons r\'ealiser plusieurs it\'eration du projet. Chaque it\'eration auras pour but de rendre un produit fonctionnel, consistant en une amelioration du precedent.
+\chapter{Realization planning}
+The project will use the Agile method (Sprint + meeting of 15 minutes every day to make a quick assessment ) . \\
+However, we gonna achieve many iterations for the project. Each iteration 'll aim to make a functional product , consisting of an improvement of the previous one.\\
 \begin{itemize}
-	\item Iteration 1: Realiser un combat entre deux IA basique (Allie (programmable) / Enemie)
-	\item Iteration 2: Realiser un systeme basique de classe 
-	\item Iteration 3: Realiser un systeme de niveau + inventaire
-	\item Iteration 4: Realiser un systeme d'histoire / quete basique
-	\item Iteration 5: Ajout d'IA enemie
-	\item Iteration 6: Amelioration du systeme d'histoire / quete (branche)
+\item Iteration 1: Realize a fight between two basic IA ( Allie (programmable) / Enemy )
+\item Iteration 2: Realize a class basic system
+\item Iteration 3: Realize level + inventory system
+\item Iteration 4: Realize the story mode / basic quests
+\item Iteration 5: Adding enemy AI
+\item Iteration 6: Improving the system of history / quest ( branch)\\
 \end{itemize}
-A la fin de ces iterations, nous pourrons considerer que la partie obligatoire est finies. Nous prévoyons au cas ou de réaliser quelque bonus plus ou moins dur, pouvant être réaliser en plus:
+
+At the end of these iterations , we can consider that the mandatory part is over. We expect the realization of some bonus?:\\
 \begin{itemize}
-	\item Ajout des achievements
-	\item Beaucoup d'item
-	\item Plus de classes
-	\item Ladder solo
-	\item Multijoueur
-	\item Ladder multijoueur
-	\item Animation entiere du personnage
+	\item	Adding achievements
+	\item	More items
+	\item	More classes
+	\item	Solo ladder
+	\item Multiplayer
+	\item	 Multiplayer Ladder
+	\item	Entire character animation
 \end{itemize}
 
 \chapter{Design}
 
-Le jeu sera r\'ealis\'e en pixel art. Chaque partie du corps des personnages et chaque item seront en réalité diff\'erents calques que nous superposeront pour cr\'eer les images finales. \\
-Cela nous permets de r\'ealiser rapidement un grand nombre de sets de personnages et de rendre nos personnages principaux facilement personnalisables. 
-Voici un exemple de nos premi\`eres r\'ealisations:\\
+The game design will be made in Pixel Art. Here is one of our implementation:
 \\
 \\
 \includegraphics[width=0.3\textwidth]{character-base}
@@ -102,26 +96,34 @@ Voici un exemple de nos premi\`eres r\'ealisations:\\
 \end{center}
 
 \chapter{Communication}
-La communication se feras via un Website/devblog et sera appui\'ee par un compte twitter qui d\'etaillera l'avancement du jeu en postant des photos, vid\'dos de gameplay etc. Le but \'etant d'attirer le plus de personnes \`a s'intéresser au projet avant m\^eme la sortie du jeu. C'est notamment pour cela qu'une phase de beta test sera disponible aux utilisateurs les plus interess\'ess\'es.\\
- La beta test sera g\'er\'ee a l'aide de la google développer console. Le site proposera \'egalement l'inscription \`a une newsletter. 
+The communication will be made via a Website / dev blog and will be helped by twitter account detailing the progress of the game by posting photos, gameplay videos etc. We want to attract people to become interested in the project even before the release of the game. This is particularly why a beta test phase will be available to the most interested users. \\
+ The beta test will be managed using the google develop console. The website also propose a newsletter.
 
-\chapter{Mon\'etisation}
-La mon\'etisation du jeu se fera via les achats in-app et les pubs. 
-Les achats in-app ne devront pas bousculer l'\'equilibre du jeu, notamment dans l'optique d'un multijoueur le plus strat\'egique possible. Nous pr\'evoyons pour le moment l'achat de packs d'xp qui permettrait de lvl up plus vite. \\
-Les pubs se voudront non-intrusive pour ne pas g\^acher l'\'experience utilisateur. Elles pourront \^etre par exemple integr\'ees sous forme de bannière a l'\'ecran de score d'un combat. Elles ne devront pas g\^ener la navigation. Nous utiliserons des api comme admob (utilis\'e par Rovio, Backflip Studio, Fingersoft... )pour int\'egrer des pubs cibl\'ees et donc augmenter nos revenus.
+\chapter{Monetization}
+The monetization of the game will be via in-app purchases and pubs.
+The in-app purchases should not upset the balance of the game , particularly in the context of the multiplayer . We plan currently buying xp packs that would help the player to lvl up faster. \\
+The pubs are non-intrusive and will not disturb the user experience . We will use as admob  API (or another one) ( used by Rovio, Backflip Studio, Fingersoft ...) to integrate the targeted pubs and increase our revenue.
 
-\chapter{Elements \`a v\'erifier en fin de projet}
+\chapter{Checklist at the end of the project}
 \begin{itemize}
-	\item Un syst\`eme d'IA fonctionnel (voir chapitre Syst\`eme d'IA)
-	\item Une interface agr\'eable
-	\item Un mode solo fonctionnel
-	\item Un multijoueur fonctionnel
-	\item La pr\'esence d'achievements
+	\item Iteration 1: Realize a fight between two basic IA ( Allie (programmable) / Enemy )
+	\item Iteration 2: Realize a class basic system
+	\item Iteration 3: Realize level + inventory system
+	\item Iteration 4: Realize the story mode / basic quests
+	\item Iteration 5: Adding enemy AI
+	\item Iteration 6: Improving the system of history / quest ( branch)
 \end{itemize}
 
 \chapter{Bonus}
 \begin{itemize}
-	\item Une mon\'etisation bien int\'egr\'ee
+	\item	Adding achievements
+	\item	More items
+	\item	More classes
+	\item	Solo ladder
+	\item Multiplayer
+	\item	 Multiplayer Ladder
+	\item	Entire character animation
 \end{itemize}
+
 
 \end{document}
