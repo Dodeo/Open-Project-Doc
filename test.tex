@@ -17,15 +17,16 @@
 
 \chapter{Pr\'esentation du projet}
 Le but du projet est de r\'ealiser un jeu vid\'eo natif sur Android.\\
-Ce jeu seras un RPG au combat tour par tour mais avec un profond aspect strat\'egique, le joueur ne pourra pas choisir ses actions \`a chaque tour, il devra \`a la place programmer une IA plus ou moins basique (voir plus loin).\\
-Le projet se d\'ecomposeras\ en deux parties : l'engine et le jeu
+Ce jeu seras un RPG au combat tour par tour mais avec un profond aspect strat\'egique, le joueur ne pourra pas choisir ses actions \`a chaque tour, il devra \`a la place programmer une IA (voir plus loin).\\
+Le projet se d\'ecomposera\ en deux parties : l'engine et le jeu
 
 \section{Engine}
-L\textquotesingle engine seras un moteur basique pour le jeu, il devras \^etre r\'eutilisable sur diff\'erents projets. Son but sera d\textquotesingle acc\'el\'erer le d\'eveloppement futur et actuel du jeu. Il se divise en plusieurs Manager.
+L\textquotesingle engine seras un moteur basique pour le jeu, il devras \^etre r\'eutilisable sur diff\'erents projets. Son but sera d\textquotesingle acc\'el\'erer le d\'eveloppement futur et actuel du jeu. Il se divise en plusieurs Managers.
 
 \subsection{Game}
 La classe Game est la classe centrale de l'engine. C'est elle qui g\`ere la logique du programme avec son son syst\`eme de state.\\
 Au lancement la classe récupérera la sauvegarde la plus r\'ecente avant de lancer le jeu.
+
 \subsection{Le DataManager}
 Le DataManager est celui qui g\`ere les sauvegardes de l'utilisateur. Il offre deux possibilit\'es:
 \begin{itemize}
@@ -37,12 +38,12 @@ Le DataManager est celui qui g\`ere les sauvegardes de l'utilisateur. Il offre d
 Les states sont les diff\'erents états du jeu, ce sont elles qui permettront de g\'erer la navigation dans l'application.
 
 \section{Projet}
-Le projet en lui m\^eme utiliseras l\textquotesingle engine. Il devras utilis\'e toutes les technologies offerte par Google, tel que le stockage sur le Cloud, le multi-joueur, les hauts-faits etc.
+Le projet en lui m\^eme utiliseras l\textquotesingle engine. Il devra utilis\'er toutes les technologies offerte par Google, tel que le stockage sur le Cloud, le multi-joueur, les hauts-faits etc.
 
 \chapter{Syst\'eme d\textquotesingle IA}
 Le joueur pourras contr\^oler une \'equipe de 3 personnages.\\
 Chaque personnage pourras avoir de nombreuses classes (Guerrier, Mage, Soigneur)\\
-Chaque classe de chaque personnage auras son propre niveau.\\
+Chaque classe de chaque personnage aura son propre niveau.\\
 Quand un personnage augmente de niveau dans une classe, il gagne des outils pour programmer son IA li\'e a cette classe, ces outils peuvent \^etre d\'ecomposer en plusieurs types:
 \begin{itemize}
 	\item Condition: Permet de conditionner le comportement de l\textquotesingle IA
@@ -59,11 +60,11 @@ Le planning du projet seras g\'erer de façon agile (Sprint chaque semaine + r\'e
 Cependant, nous allons r\'ealiser plusieurs it\'eration du projet. Chaque it\'eration auras pour but de rendre un produit fonctionnel, consistant en une amelioration du precedent.
 \begin{itemize}
 	\item Iteration 1: Realiser un combat entre deux IA basique (Allie (programmable) / Ennemie)
-	\item Iteration 2: Realiser un systeme basique de classe 
-	\item Iteration 3: Realiser un systeme de niveau + inventaire
-	\item Iteration 4: Realiser un systeme d'histoire / quete basique
-	\item Iteration 5: Ajout d'IA enemie
-	\item Iteration 6: Amelioration du systeme d'histoire / quete (branche)
+	\item Iteration 2: Realiser un syst\`eme basique de classe 
+	\item Iteration 3: Realiser un syst\`me de niveau + inventaire
+	\item Iteration 4: Realiser un syst\`eme d'histoire / quete basique
+	\item Iteration 5: Ajout d'IA ennemie
+	\item Iteration 6: Amelioration du syst\`eme d'histoire / qu\^ete (branche)
 \end{itemize}
 A la fin de ces iterations, nous pourrons considerer que la partie obligatoire est finies. Nous prévoyons au cas ou de réaliser quelque bonus plus ou moins dur, pouvant être réaliser en plus:
 \begin{itemize}
@@ -73,7 +74,7 @@ A la fin de ces iterations, nous pourrons considerer que la partie obligatoire e
 	\item Ladder solo
 	\item Multijoueur
 	\item Ladder multijoueur
-	\item Animation entiere du personnage
+	\item Animation enti\'ere du personnage
 \end{itemize}
 
 \chapter{Design}
@@ -94,7 +95,7 @@ Voici un exemple de nos premi\`eres r\'ealisations:\\
 \end{center}
 
 \chapter{Communication}
-La communication se feras via un Website/devblog et sera appui\'ee par un compte twitter qui d\'etaillera l'avancement du jeu en postant des photos, vid\'dos de gameplay etc. Le but \'etant d'attirer le plus de personnes \`a s'intéresser au projet avant m\^eme la sortie du jeu. C'est notamment pour cela qu'une phase de beta test sera disponible aux utilisateurs les plus interess\'ess\'es.\\
+La communication se fera via un Website/devblog et sera appui\'ee par un compte twitter qui d\'etaillera l'avancement du jeu en postant des photos, vid\'dos de gameplay etc. Le but \'etant d'attirer le plus de personnes \`a s'intéresser au projet avant m\^eme la sortie du jeu. C'est notamment pour cela qu'une phase de beta test sera disponible aux utilisateurs les plus interess\'es.\\
  La beta test sera g\'er\'ee a l'aide de la google développer console. Le site proposera \'egalement l'inscription \`a une newsletter. 
 
 \chapter{Mon\'etisation}
