@@ -1,5 +1,5 @@
 \documentclass[16pt, oneside]{report}
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage{textcomp}
  \usepackage[pdftex]{graphicx}
  \usepackage{grffile}  
@@ -17,20 +17,20 @@
 
 \chapter{Project presentation}
 The goal of our project is to achieve a native video game on Android. \\
-This game will be a battle RPG turn by turn but with a profound strategical aspect , the player can not choose his actions at each turn, instead he will have to set a basic IA (see below). \\
+This game will be a turn by turn battle RPG but with a profound strategical aspect , the player can not choose his actions at each turn, instead he will have to set a basic IA (see below). \\
 The project will be split into two parts: the engine and the game.
 
 \section{Engine}
-The engine will be a basic engine for the game, it will have to be reusable on different projects . Its purpose will be to accelerate the future and current development of the game. It is divided into several Manager.
+The engine will be a basic engine for the game, it will have to be reusable on different projects . Its purpose will be to accelerate current and future development of the game. It is divided into several Managers
 
 \subsection{Game}
-Game class is the central class of the engine. He's the one who manage the program logic with his State System. \\
-At launch the class tries to automatically load the save.
+Game class is the central class of the engine. It is the one who manage the program logic with its State System. \\
+At launch the class tries to automatically load the saved game.
 
-\subsection{Le DataManager}
-The DataManager is the one who manages the backups of the user. It offers two possibilities :
+\subsection{DataManager}
+The DataManager is the one who manages the user backups. It offers two possibilities :
 \begin {itemize}
-	\item Local Save : The file is stored on the user's phone in the application files .
+	\item Local Save : The file is stored on the user's phone in the application files.
 	\item Cloud Save : If the user logs in with a Google+ account and gives us the authorization, the DataManager also backup to the cloud. \\ 
 \end {itemize}
 
@@ -39,36 +39,36 @@ The DataManager is the one who manages the backups of the user. It offers two po
 The states are the different states of the game, they will manage the navigation in the application.\\
 
 \section{Projet}
-The project gonna use our engine. He'll have to use all the technologies offered by Google, such as cloud storage , multiplayer , achievements  etc.
+The project gonna use our engine. it will have to use most the technologies offered by Google, such as cloud storage , multiplayer , achievements  etc.
 
 \chapter{IA}
 The player will be able to control a team of 3 characters . \\
-Each character will be able to have many classes ( Warrior , Mage, Healer ) \\
+Each character will be able to have sevrals classes ( Warrior , Mage, Healer ) \\
 Each class of each character will have its own level. \\
-When a character levels up in a class , he gains tools to program the AI of this class, these tools can be decompose into several types :
+When a character levels up in a class, he gains tools to program the AI of this class, these tools can be decomposed into several types :
 \begin {itemize}
 \item Condition: The behaviour of the AI
-\item Action: This can be spells, attacks, etc ...
-\item Slot : To ask a new set of conditions / actions
+\item Action: They can be spells, attacks, etc ...
+\item Slot : To build a new set of conditions / actions
 \end {itemize}
 
-\section{Classe ?}
-Each character has multiple classes , the player can decide to change the classes of these characters during the fight to vary the strategies according to the opponent.\\\\
-Depending on the use frequency of a class in a fight , this one earns more or less percentage of the amount of experience given by this fight.
+\section{Class system details}
+Each character has multiple classes, the player can decide to change the class of these characters during the fight to vary the strategies according to the opponent.\\\\
+Depending on the frequency use of a class during a fight, this one earns more or less percentage of the amount of experience given by this fight.
 
 \chapter{Realization planning}
 The project will use the Agile method (Sprint + meeting of 15 minutes every day to make a quick assessment ) . \\
 However, we gonna achieve many iterations for the project. Each iteration 'll aim to make a functional product , consisting of an improvement of the previous one.\\
 \begin{itemize}
-\item Iteration 1: Realize a fight between two basic IA ( Allie (programmable) / Enemy )
-\item Iteration 2: Realize a class basic system
-\item Iteration 3: Realize level + inventory system
-\item Iteration 4: Realize the story mode / basic quests
+\item Iteration 1: Achieve a fight between two basic AI ( Allie (programmable) / Enemy )
+\item Iteration 2: Achieve a basic class system
+\item Iteration 3: Achieve level + inventory system
+\item Iteration 4: Achieve the story mode / basic quests
 \item Iteration 5: Adding enemy AI
-\item Iteration 6: Improving the system of history / quest ( branch)\\
+\item Iteration 6: Improving the system of history / quest (branch)\\
 \end{itemize}
 
-At the end of these iterations , we can consider that the mandatory part is over. We expect the realization of some bonus?:\\
+At the end of these iterations , we can consider that the mandatory part is over. We expect the realization of some bonus?: \\
 \begin{itemize}
 	\item	Adding achievements
 	\item	More items
@@ -96,22 +96,22 @@ The game design will be made in Pixel Art. Here is one of our implementation:
 \end{center}
 
 \chapter{Communication}
-The communication will be made via a Website / dev blog and will be helped by twitter account detailing the progress of the game by posting photos, gameplay videos etc. We want to attract people to become interested in the project even before the release of the game. This is particularly why a beta test phase will be available to the most interested users. \\
- The beta test will be managed using the google develop console. The website also propose a newsletter.
+The communication will be made via a Website / dev blog and will be helped by twitter account detailing the progress of the game by posting photos, gameplay videos etc. We want to attract people and make them interested in the project even before the release of the game. This is especially why a beta test phase will be available to the most interested users. \\
+ The beta test will be managed using the google developer console. The website also propose a newsletter.
 
 \chapter{Monetization}
-The monetization of the game will be via in-app purchases and pubs.
-The in-app purchases should not upset the balance of the game , particularly in the context of the multiplayer . We plan currently buying xp packs that would help the player to lvl up faster. \\
-The pubs are non-intrusive and will not disturb the user experience . We will use as admob  API (or another one) ( used by Rovio, Backflip Studio, Fingersoft ...) to integrate the targeted pubs and increase our revenue.
+The monetization of the game will be via in-app purchases and ads.
+The in-app purchases should not upset the balance of the game, especially in the context of the multiplayer . We currently plan to offer paying xp packs that would help the player to level up faster. \\
+The ads are non-intrusive and will not disturb the user experience. We will use admob  API ( used by Rovio, Backflip Studio, Fingersoft ...) to integrate the targeted ads and increase our revenue.
 
 \chapter{Checklist at the end of the project}
 \begin{itemize}
-	\item Iteration 1: Realize a fight between two basic IA ( Allie (programmable) / Enemy )
-	\item Iteration 2: Realize a class basic system
-	\item Iteration 3: Realize level + inventory system
-	\item Iteration 4: Realize the story mode / basic quests
-	\item Iteration 5: Adding enemy AI
-	\item Iteration 6: Improving the system of history / quest ( branch)
+\item Iteration 1: Achieve a fight between two basic AI ( Allie (programmable) / Enemy )
+\item Iteration 2: Achieve a basic class system
+\item Iteration 3: Achieve level + inventory system
+\item Iteration 4: Achieve the story mode / basic quests
+\item Iteration 5: Adding enemy AI
+\item Iteration 6: Improving the system of history / quest (branch)\\
 \end{itemize}
 
 \chapter{Bonus}

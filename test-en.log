@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.26)  10 MAR 2015 11:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.26)  10 MAR 2015 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -393,6 +393,11 @@ Chapitre 6.
 
 ]
 Chapitre 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
 [8
 
 ]
@@ -401,18 +406,18 @@ Chapitre 8.
 
 ] (./test-en.aux) ) 
 Here is how much of TeX's memory you used:
- 3081 strings out of 493117
- 45339 string characters out of 6135433
- 106025 words of memory out of 5000000
- 6523 multiletter control sequences out of 15000+600000
+ 3077 strings out of 493117
+ 45277 string characters out of 6135433
+ 106005 words of memory out of 5000000
+ 6519 multiletter control sequences out of 15000+600000
  8798 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,30p,375b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,30p,377b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr12.pfb>
-Output written on test-en.pdf (10 pages, 59886 bytes).
+Output written on test-en.pdf (10 pages, 59418 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
