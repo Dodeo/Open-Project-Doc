@@ -25,24 +25,16 @@ L\textquotesingle engine seras un moteur basique pour le jeu, il devras \^etre r
 
 \subsection{Game}
 La classe Game est la classe centrale de l'engine. C'est elle qui g\`ere la logique du programme avec son son syst\`eme de state.\\
-Au lancement la classe tente de se connecter automatiquement \`a l'api google pour que l'utilisateur se connecte et profite des achievements, de la sauvegarde sur le cloud etc.\\
-L'utilisateur peut refuser la connection. Si il refuse la connection 3 fois de suite au lancement, le programme ne lancera plus la connection automatique. Cette donn\'ee est stock\'ee dans un fichier en cache.\\
-Avant de lancer le jeu, la classe game va tenter de charger une sauvegarde via la DataManager.
-
+Au lancement la classe récupérera la sauvegarde la plus r\'ecente avant de lancer le jeu.
 \subsection{Le DataManager}
 Le DataManager est celui qui g\`ere les sauvegardes de l'utilisateur. Il offre deux possibilit\'es:
 \begin{itemize}
 	\item Sauvegarder en local: Le fichier est stock\'e sur le telephone de l'utilisateur dans les fichiers de l'application.
-	\item Sauvegarder sur le cloud: Si l'utilisateur se connecte avec son compte Google+ et nous en donne l'autorisation, le DataManager sauvegarde \'egalement sur le cloud.\\
+	\item Sauvegarder sur le cloud: Si l'utilisateur se connecte avec son compte Google+ et nous en donne l'autorisation, le DataManager sauvegarde sur le cloud.\\
 \end{itemize}
- Le travail du DataManager est de faciliter les taches de sauvegarde et de chargement des donn\'ees. Il permet lors du chargement de choisir automatiquement la bonne sauvegarde selon un timestamp ajout\'e au fichier et en g\'erant les conflits si n\'ecessaire. Lors de la sauvegarde il s'occupe de sauvegarder soit en local soit en local + cloud selon l'\'etat de connexion \`a l'API google.
-
 
 \subsection{State}
-Les states sont les diff\'erents états du jeu, ce sont elles qui permettront de g\'erer la navigation dans l'application. La game comprends une stack de State.\\
- Imaginons par exemple que l'utilisateur soit dans le menu principal, c'est donc la state li\'ee a ce menu qui recevra toutes les actions de l'utilisateur. Si il lance une partie, la state de la partie se retrouvera en haut de la stack recevant ainsi toutes les instructions de la game, c'est elle qui pourra dessiner et recevoir les inputs de l'utilisateur. \\
- Si l'utilisateur veut revenir a l'\'etat precedent qui est donc le menu principal nous n'avons plus qu'\`a d\'epiler la state de la partie afin que la state du menu reprenne le contr\^ole sur le dessin et les inputs.
-
+Les states sont les diff\'erents états du jeu, ce sont elles qui permettront de g\'erer la navigation dans l'application.
 
 \section{Projet}
 Le projet en lui m\^eme utiliseras l\textquotesingle engine. Il devras utilis\'e toutes les technologies offerte par Google, tel que le stockage sur le Cloud, le multi-joueur, les hauts-faits etc.
@@ -66,7 +58,7 @@ En fonction de la fr\'equence d\textquotesingle utilisation d'une classe dans un
 Le planning du projet seras g\'erer de façon agile (Sprint chaque semaine + r\'eunion tout les jours de 15min pour faire un bilan rapide).\\
 Cependant, nous allons r\'ealiser plusieurs it\'eration du projet. Chaque it\'eration auras pour but de rendre un produit fonctionnel, consistant en une amelioration du precedent.
 \begin{itemize}
-	\item Iteration 1: Realiser un combat entre deux IA basique (Allie (programmable) / Enemie)
+	\item Iteration 1: Realiser un combat entre deux IA basique (Allie (programmable) / Ennemie)
 	\item Iteration 2: Realiser un systeme basique de classe 
 	\item Iteration 3: Realiser un systeme de niveau + inventaire
 	\item Iteration 4: Realiser un systeme d'histoire / quete basique
@@ -86,8 +78,7 @@ A la fin de ces iterations, nous pourrons considerer que la partie obligatoire e
 
 \chapter{Design}
 
-Le jeu sera r\'ealis\'e en pixel art. Chaque partie du corps des personnages et chaque item seront en réalité diff\'erents calques que nous superposeront pour cr\'eer les images finales. \\
-Cela nous permets de r\'ealiser rapidement un grand nombre de sets de personnages et de rendre nos personnages principaux facilement personnalisables. 
+Le jeu sera r\'ealis\'e en pixel art.
 Voici un exemple de nos premi\`eres r\'ealisations:\\
 \\
 \\

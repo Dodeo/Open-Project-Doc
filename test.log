@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.5)  9 MAR 2015 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.26)  10 MAR 2015 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -285,20 +285,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Chapitre 1.
+Missing character: There is no é in font cmr10!
+Missing character: There is no é in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
+Missing character: There is no é in font cmr10!
 [1
 
-]
-Missing character: There is no é in font cmr10!
- [2]
+] [2]
 Chapitre 2.
 Missing character: There is no é in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
@@ -315,65 +316,69 @@ Missing character: There is no é in font cmr10!
 
 ]
 Chapitre 4.
-Missing character: There is no é in font cmr10!
-Missing character: There is no é in font cmr10!
 <character-base.png, id=23, 32.12pt x 32.12pt>
 File: character-base.png Graphic file (type png)
  <use character-base.png>
-Package pdftex.def Info: character-base.png used on input line 94.
+Package pdftex.def Info: character-base.png used on input line 85.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
 <character-head.png, id=25, 32.12pt x 32.12pt>
 File: character-head.png Graphic file (type png)
  <use character-head.png>
-Package pdftex.def Info: character-head.png used on input line 95.
+Package pdftex.def Info: character-head.png used on input line 86.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
 <character-robe.png, id=26, 32.12pt x 32.12pt>
 File: character-robe.png Graphic file (type png)
  <use character-robe.png>
-Package pdftex.def Info: character-robe.png used on input line 96.
+Package pdftex.def Info: character-robe.png used on input line 87.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
 <character-wand.png, id=27, 32.12pt x 32.12pt>
 File: character-wand.png Graphic file (type png)
  <use character-wand.png>
-Package pdftex.def Info: character-wand.png used on input line 97.
+Package pdftex.def Info: character-wand.png used on input line 88.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--101
+Overfull \hbox (2.02821pt too wide) in paragraph at lines 81--92
+[]\OT1/cmr/m/n/10 Le jeu sera r^^Sealis^^Se en pixel art. Voici un exemple de n
+os premi^^Reres r^^Sealisations : 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--101
+Underfull \hbox (badness 10000) in paragraph at lines 81--92
 
  []
 
 
-Overfull \hbox (75.67085pt too wide) in paragraph at lines 89--101
+Overfull \hbox (75.67085pt too wide) in paragraph at lines 81--92
 [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--101
+Underfull \hbox (badness 10000) in paragraph at lines 81--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--101
+Underfull \hbox (badness 10000) in paragraph at lines 81--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--101
+Underfull \hbox (badness 10000) in paragraph at lines 81--92
 
  []
 
 <character.png, id=28, 32.12pt x 32.12pt>
 File: character.png Graphic file (type png)
  <use character.png>
-Package pdftex.def Info: character.png used on input line 102.
+Package pdftex.def Info: character.png used on input line 93.
 (pdftex.def)             Requested size: 103.50105pt x 103.50945pt.
  [5
 
@@ -400,7 +405,7 @@ Chapitre 8.
 ] (./test.aux) ) 
 Here is how much of TeX's memory you used:
  3093 strings out of 493117
- 45435 string characters out of 6135434
+ 45435 string characters out of 6135433
  106025 words of memory out of 5000000
  6533 multiletter control sequences out of 15000+600000
  9473 words of font info for 33 fonts, out of 8000000 for 9000
@@ -413,7 +418,7 @@ m/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2
 488.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm100
 0.pfb>
-Output written on test.pdf (10 pages, 66088 bytes).
+Output written on test.pdf (10 pages, 64957 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
